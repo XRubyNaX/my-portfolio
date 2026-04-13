@@ -1,0 +1,231 @@
+
+
+
+body{
+  margin:0;
+  background-image: url("cute cat desktop wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:100vh;
+  background-position: 95% 95%;   
+  overflow: hidden; 
+
+}
+
+.window{
+  width: min(560px, 90vw);
+  height: min(480px, 80vh);
+  
+  background-color: #d9d9d9;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  box-shadow: 3px 3px#222;
+  position: absolute;
+  padding:6px;
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+.title-bar{
+  height: 32px;
+  margin-top: 6x;
+  margin-left:2px;
+  margin-right:2px;
+  background:  #9f90d0;
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0  8px;
+  border: 2px solid black;
+  border-color: #ffffff #303234  #303234 #ffffff;
+  box-shadow: 3px 3px #303234;
+  position: relative;
+  font-style: bold;
+  font-size: larger;
+  flex-shrink: 0;
+}
+
+.window-buttons{
+  display:flex;
+  gap: 2px;
+
+}
+
+.window-buttons button{
+  width: 25px;
+  height: 25px;
+  border:2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  padding:0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  cursor:pointer;
+}
+.min span{
+   transform: translateY(3px);
+   font-size: 10px;
+   font-weight: bold;
+}
+
+.max span{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.close span{
+  font-size: 12px;
+}
+
+.icons{
+  position: absolute;
+    top: 80px;
+    left: 40px;
+    display: grid;
+    grid-template-columns: 100px 100px; 
+    gap: 30px; 
+    column-gap: 60px;
+
+}
+
+.desktop-icon{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 100px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+
+}
+
+.desktop-icon img{
+  width: 65px;
+  height: 65px;
+  display: block;
+  margin-bottom: 2px;
+  
+}
+
+.desktop-icon span{
+  display:block;
+  margin-top:3px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+
+}
+
+.desktop-icon:hover{
+  background: rgba(255,255,255,0.2);
+
+}
+
+.intro-window-body{
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 30px;
+  height: 100%;
+  margin-top: 10px;
+  
+
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height:1.6;
+  
+
+}
+
+.window-body p{
+  flex-grow: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#projects-window{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  animation: windowOpen 0.2s ease-out;
+  flex-direction: column;
+  
+
+
+}
+
+.projects-window-body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 30px;
+  height: 100%;
+  margin-top: 10px;
+  
+
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height:1.6;
+  
+}
+
+#intro-window{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  animation: windowOpen 0.2s ease-out;
+  flex-direction: column;
+
+
+
+}
+
+@keyframes windowOpen {
+    from {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.window.fullscreen {
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  transform: none !important;
+  margin: 0;
+  z-index: 9999;
+
+}
+
+.window.fullscreen .window-body{
+  height: calc(100vh - 35px); /*body - title bar*/
+  overflow-y: auto;
+  max-height: none;
+  zoom: 1.5;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: top left;
+  
+}

@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+      body {
+        font-family: 'Sour Gummy', sans-serif;
+      }
+</style>
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="icons">
+        <a href="https://github.com/XRubyNaX" class="desktop-icon" target="_blank" rel="noopener noreferrer">
+          <img src="icons8-github-64.png" alt="GitHub" class="icon">
+          <span>Github</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/rubina-guragain-141132293/" class="desktop-icon" target="_blank" rel="noopener noreferrer">
+          <img src="icons8-linkedin-64.png" alt="LinkedIn" class="icon">
+          <span>LinkedIn</span>
+        </a>
+
+        <div class = "desktop-icon" onclick="openEmail()">
+          <img src="icons8-email-80.png" alt="Email" class="icon">
+          <span>Email</span>
+        </div>
+
+        <div class="desktop-icon" id="projects-folder">
+        <img src="icons8-lightbulb-100.png" class="icon">
+        <span>Projects</span>
+        </div>
+
+        <a href="Rubina_Guragain_Resume.pdf" class="desktop-icon" target="_blank">
+        <img src="icons8-resume-64.png" alt="Resume" class="icon">
+        <span>Resume</span>
+        </a>
+
+        <a href="Transcript_rubina.pdf" class="desktop-icon" target="_blank">
+        <img src="icons8-report-card-64.png" alt="Email" class="icon">
+        <span>Transcript</span>
+        </a>
+
+        <div class ="desktop-icon" id="about-me-icon">
+          <img src="icons8-cute-turtle-64.png" class="icon">
+          <span>About Me</span>
+        </div>
+
+        <div class ="desktop-icon">
+          <img src="icons8-cute-mushroom-64.png" alt="Email" class="icon">
+          <span>Cute Mushroom</span>
+        </div>
+
+
+      </div>
+      <div class="window" id="intro-window">
+        
+      <div class="title-bar">
+        <span>Hello!</span>
+      <div class="window-buttons">
+        <button class="min"><span>—</span></button>
+        <button class ="max"><span>▢</span></button>
+        <button class="close"><span>X</span></button>
+      </div>
+
+      
+      </div>
+
+      <div class="intro-window-body">
+        <img src="icons8-cat-100.png" alt="Email" class="window-icon">
+        <p> I’m an aspiring web developer/software developer with a soft spot for vintage interfaces and modern code. 
+          I spend my time solving logic problems and crafting intuitive and visually engaging user interfaces. 
+          Feel free to explore the files, check out my projects, or just hang out with the cat.</p>
+       </div>
+    </div>
+
+
+     <div class="window" id="projects-window">
+        
+      <div class="title-bar">
+        <span>MY PROJECTS</span>
+      <div class="window-buttons">
+        <button class="min"><span>—</span></button>
+        <button class ="max"><span>▢</span></button>
+        <button class="close"><span>X</span></button>
+      </div>
+      </div>
+
+      <div class="projects-window-body">
+        <h1>Full-Stack Flower Store Web Application</h1>
+        <p>Built a full-stack e-commerce application using MongoDB, Express.js, React.js, and Node.js (MERN stack). 
+          Implemented product catalog, shopping cart, and order management features.</p>
+
+        <h1>Automated Greenhouse System </h1>
+        <p>Developed a smart greenhouse system using ESP32 (C/C++) and Android Studio (Java).
+           Integrated sensors for real-time monitoring and automated watering functionality.</p>
+
+        <h1>Academic Advisement Application</h1>
+        <p>Created a full-stack academic planning tool using React.js (frontend) and Python (Flask) backend. 
+          Implemented transcript processing and course recommendation logic.</p>
+
+      </div>
+       
+       
+       
+    </div>
+       
+
+        
+
+      </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+  </body>
+</html>
